@@ -1,0 +1,37 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Jupyter Notebook checkpoints
+*.ipynb_checkpoints/
+
+# Environments
+.env
+.venv
+env/
+venv/
+
+# Checkpoint & output
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+
+# Visual Studio Code
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Figures and results (optional)
+figs/
+*.png
+*.jpg
+
+# YAML configs (if private)
+# directnet_config.yaml
