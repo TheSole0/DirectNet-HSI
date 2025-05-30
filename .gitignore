@@ -35,3 +35,12 @@ figs/
 
 # YAML configs (if private)
 # directnet_config.yaml
+
+# Jupyter Notebook
+directnet.ipynb
+
+# Temporary scripts
+main copy.py
+
+# License file (optional)
+LICENSE
