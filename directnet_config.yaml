@@ -1,0 +1,31 @@
+# directnet_config.yaml
+
+# DirectNet 훈련/추론 공통 설정
+seed: 42           # 랜덤시드
+dataset: MyData    # 데이터셋명 (커스텀 입력 가능)
+
+# 데이터 로더
+batch_size: 8      # 1~8 적절 (샘플 수에 따라 조정)
+num_workers: 8     # 멀티스레드 로딩
+
+# 모델 구조
+win_in: 3          # 입력 window (실제 코드에 따라 고정)
+win_out: 19        # 출력 window (patch size 등)
+nch_ker: 64        # 내부 커널 수 (model.py 기본값)
+norm_mode: bnorm   # 'bnorm' 또는 'inorm'
+init_weight_type: normal  # 가중치 초기화 ('normal', 'xavier', 'kaiming', 'orthogonal')
+init_gain: 0.02
+
+# 학습 파라미터
+learning_rate: 0.0001
+weight_decay: 0.00001
+epochs: 400
+loss_mode: l1      # 손실함수('l1' 또는 'l2')
+gpu_ids: 0         # CUDA device index (예: 0)
+
+# 저장/출력
+save_dir: checkpoints
+save_freq: 5      # 몇 epoch마다 모델 저장
+
+# 기타
+nblk: 3            # resblock 개수 = (win_out-7)//4 공식에 맞게 자동 계산됨 (보통 3)
